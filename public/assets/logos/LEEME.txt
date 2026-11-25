@@ -1,0 +1,8 @@
+COLOCA AQUÍ TUS LOGOS (con estos nombres exactos):
+
+  logo-ase-udla.png   -> logo de ASE UDLA (idealmente versión blanca, fondo transparente)
+  logo-fica.png       -> logo / texto FICA (versión blanca, fondo transparente)
+
+Mientras no existan, la página muestra un recuadro punteado en su lugar.
+Si tus archivos son .svg o .jpg, cambia la extensión en los <img> de los .html
+(busca "logo-ase-udla" y "logo-fica").

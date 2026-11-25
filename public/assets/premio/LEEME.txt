@@ -1,0 +1,3 @@
+(Opcional) Coloca aquí una imagen de los premios con el nombre:  premio.png
+Si no la pones, en su lugar se ve un recuadro punteado que dice "Imagen del premio".
+Los textos de los premios están en public/index.html (sección "PREMIOS").

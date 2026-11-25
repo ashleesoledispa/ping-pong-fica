@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Torneo de Ping Pong · Fiestas de Quito · ASE UDLA FICA</title>
+  <meta name="description" content="Torneo de Ping Pong 1 vs 1 por Fiestas de Quito. 2 de diciembre, 10h00 a 16h00, en UDLAPark. Abierto a toda la UDLA. Inscripciones hasta el lunes 30 de noviembre. Hasta 64 cupos.">
+  <meta property="og:title" content="Torneo de Ping Pong por Fiestas de Quito · ASE UDLA FICA">
+  <meta property="og:description" content="1 vs 1 · 2 de diciembre · UDLAPark · $2,50. Premio: GTA VI para PS5. ¡Inscríbete!">
+  <meta name="theme-color" content="#0a2552">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <!-- ===== BARRA SUPERIOR ===== -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a href="/" class="brand" aria-label="Inicio">
+        <!-- LOGO: coloca tu archivo en public/assets/logos/logo-ase-udla.png -->
+        <span class="logo-slot logo-slot--sm" data-label="Logo ASE UDLA">
+          <img src="/assets/logos/logo-ase-udla.png" alt="ASE UDLA">
+        </span>
+        <span class="brand__text">Ping Pong<br><small>Fiestas de Quito</small></span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="menu">
+        <a href="#info">Info</a>
+        <a href="#formato">Formato</a>
+        <a href="#reglamento">Reglamento</a>
+        <a href="#premio">Premios</a>
+        <a href="/inscripcion" class="btn btn--red btn--sm">Inscríbete</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== PORTADA ===== -->
+  <section class="hero">
+    <div class="banderines" aria-hidden="true"></div>
+    <div class="glow glow--l" aria-hidden="true"></div>
+    <div class="glow glow--r" aria-hidden="true"></div>
+    <div class="fireworks" aria-hidden="true">
+      <span class="fw fw--1"></span><span class="fw fw--2"></span><span class="fw fw--3"></span><span class="fw fw--4"></span>
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <p class="kicker">¡Qué fue, UDLA! Llegaron las fiestas</p>
+
+        <div class="title-frame">
+          <h1 class="title">
+            <span class="title__top">Torneo de</span>
+            <span class="title__main">Ping Pong</span>
+          </h1>
+          <span class="pill">Por fiestas de Quitoff</span>
+        </div>
+
+        <p class="hero__lead">Agarra tu raqueta, saca la sal quiteña y demuestra quién manda en la mesa. Organiza ASE FICA, pero <strong>está abierto a toda la U</strong>.</p>
+
+        <ul class="chips">
+          <li>2 de diciembre</li>
+          <li>10h00 – 16h00</li>
+          <li>UDLAPark</li>
+          <li>1 vs 1</li>
+          <li>$2,50</li>
+        </ul>
+
+        <div class="hero__cta">
+          <a href="/inscripcion" class="btn btn--red btn--lg">Inscríbete ya</a>
+          <a href="#reglamento" class="btn btn--ghost btn--lg">Ver reglamento</a>
+        </div>
+
+        <div class="countdown" data-countdown>
+          <p class="countdown__label">Inscripciones cierran el lunes 30 de nov. · Faltan</p>
+          <div class="countdown__grid">
+            <div><b data-cd="d">--</b><span>días</span></div>
+            <div><b data-cd="h">--</b><span>horas</span></div>
+            <div><b data-cd="m">--</b><span>min</span></div>
+            <div><b data-cd="s">--</b><span>seg</span></div>
+          </div>
+          <p class="countdown__teams" data-teams hidden></p>
+        </div>
+      </div>
+
+      <div class="hero__art" aria-hidden="true">
+        <svg class="paddles" viewBox="0 0 420 440">
+          <defs>
+            <linearGradient id="wood" x1="0" x2="1">
+              <stop offset="0" stop-color="#9a5a27"/><stop offset=".5" stop-color="#e0ad74"/><stop offset="1" stop-color="#9a5a27"/>
+            </linearGradient>
+            <radialGradient id="rubRed" cx=".38" cy=".32" r=".85">
+              <stop offset="0" stop-color="#f0283f"/><stop offset="1" stop-color="#9e0a1d"/>
+            </radialGradient>
+            <radialGradient id="rubBlack" cx=".38" cy=".32" r=".85">
+              <stop offset="0" stop-color="#2c2d33"/><stop offset="1" stop-color="#08080a"/>
+            </radialGradient>
+            <radialGradient id="ballG" cx=".35" cy=".3" r=".75">
+              <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cfd6e4"/>
+            </radialGradient>
+            <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+              <feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#000" flood-opacity=".45"/>
+            </filter>
+          </defs>
+          <g filter="url(#shadow)">
+            <g class="paddle paddle--l" transform="rotate(-16 130 200)">
+              <rect x="112" y="250" width="38" height="140" rx="9" fill="url(#wood)"/>
+              <rect x="120" y="262" width="22" height="70" rx="5" fill="#c2161f" opacity=".85"/>
+              <rect x="124" y="340" width="14" height="28" rx="7" fill="#f4f4f4" opacity=".9"/>
+              <ellipse cx="131" cy="150" rx="108" ry="118" fill="#c35b25"/>
+              <ellipse cx="131" cy="150" rx="104" ry="114" fill="url(#rubBlack)"/>
+            </g>
+            <g class="paddle paddle--r" transform="rotate(16 290 200)">
+              <rect x="270" y="250" width="38" height="140" rx="9" fill="url(#wood)"/>
+              <rect x="278" y="262" width="22" height="70" rx="5" fill="#d61b2c"/>
+              <rect x="282" y="340" width="14" height="28" rx="7" fill="#f4f4f4" opacity=".9"/>
+              <ellipse cx="289" cy="150" rx="108" ry="118" fill="#c35b25"/>
+              <ellipse cx="289" cy="150" rx="104" ry="114" fill="url(#rubRed)"/>
+            </g>
+          </g>
+          <circle class="ball" cx="210" cy="290" r="24" fill="url(#ballG)"/>
+        </svg>
+        <div class="badge-ball">
+          <b>64</b>
+          <span>cupos</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__brand">
+      <!-- LOGOS: public/assets/logos/logo-ase-udla.png y logo-fica.png -->
+      <span class="logo-slot" data-label="Logo ASE UDLA">
+        <img src="/assets/logos/logo-ase-udla.png" alt="ASE UDLA">
+      </span>
+      <span class="logo-slot" data-label="Logo FICA">
+        <img src="/assets/logos/logo-fica.png" alt="FICA">
+      </span>
+    </div>
+
+    <img class="skyline" src="/assets/quito-skyline.svg" alt="" aria-hidden="true">
+  </section>
+
+  <!-- ===== CINTA ===== -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>¡Que viva Quito!</span><span>1 vs 1</span><span>UDLAPark</span><span>2 de diciembre</span><span>GTA VI para el campeón</span><span>Hasta 64 cupos</span><span>¡Qué bestia!</span><span>Abierto a toda la U</span>
+      <span>¡Que viva Quito!</span><span>1 vs 1</span><span>UDLAPark</span><span>2 de diciembre</span><span>GTA VI para el campeón</span><span>Hasta 64 cupos</span><span>¡Qué bestia!</span><span>Abierto a toda la U</span>
+    </div>
+  </div>
+
+  <!-- ===== INFO ===== -->
+  <section class="section section--info" id="info">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="eyebrow">La info, full clara</p>
+        <h2 class="h2">Todo lo que necesitas <span class="red">saber</span></h2>
+      </header>
+
+      <div class="info-grid">
+        <article class="info-card reveal">
+          <h3>Fecha y hora</h3>
+          <p class="info-card__big">2 de dic.</p>
+          <p>Miércoles, de 10h00 a 16h00, en plenas fiestas de Quito.</p>
+        </article>
+        <article class="info-card reveal">
+          <h3>Lugar</h3>
+          <p class="info-card__big">UDLAPark</p>
+          <p>Llega 10 minutos antes de tu encuentro.</p>
+        </article>
+        <article class="info-card reveal">
+          <h3>Inscripciones</h3>
+          <p class="info-card__big">Hasta el lunes 30 de nov.</p>
+          <p>Hasta 64 cupos. Confirmamos tu cupo por WhatsApp hasta el 1 de diciembre.</p>
+        </article>
+        <article class="info-card info-card--red reveal">
+          <h3>Valor</h3>
+          <p class="info-card__big">$2,50</p>
+          <p>Por inscripción. Transferencia o depósito a Banco Pichincha.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MODALIDAD ===== -->
+  <section class="section section--modalidad" id="modalidad">
+    <div class="chiva-band" aria-hidden="true"></div>
+    <div class="container modalidad">
+      <div class="modalidad__copy reveal">
+        <p class="eyebrow eyebrow--light">Modalidad</p>
+        <h2 class="h2 h2--light">Mano a mano, <br>rápido y sin piedad</h2>
+        <p>Tú contra tu rival. Partidos a 2 sets de 5 puntos o un máximo de 10 minutos: si se acaba el tiempo, gana quien tenga más puntos. Hay 2 minutos de cambio entre un encuentro y otro… ¡achachay!</p>
+      </div>
+      <div class="modalidad__stats">
+        <div class="stat reveal"><b>1<small>vs</small>1</b><span>Individual</span></div>
+        <div class="stat reveal"><b>2<small>×</small>5</b><span>2 sets de 5 puntos</span></div>
+        <div class="stat reveal"><b>10'</b><span>Máximo por partido</span></div>
+        <div class="stat reveal"><b>64</b><span>Cupos</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FORMATO / ELIMINATORIAS ===== -->
+  <section class="section section--format" id="formato">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="eyebrow">Formato del torneo</p>
+        <h2 class="h2">Eliminación <span class="red">directa</span></h2>
+        <p class="section__sub">Si pierdes, quedas fuera. Si ganas, pasas a la siguiente ronda.</p>
+      </header>
+
+      <div class="format">
+        <ol class="format__steps reveal">
+          <li>
+            <b>Sorteo</b>
+            <span>Al inicio se arma un cuadro por sorteo y los jugadores se enfrentan por parejas: A contra B, C contra D…</span>
+          </li>
+          <li>
+            <b>Avanzan los ganadores</b>
+            <span>Los ganadores se enfrentan en la ronda siguiente. Si ganan A y C, juegan A contra C.</span>
+          </li>
+          <li>
+            <b>Ronda tras ronda</b>
+            <span>Primera ronda, octavos, cuartos y semifinales. En cada ronda queda la mitad de los jugadores.</span>
+          </li>
+          <li>
+            <b>La final</b>
+            <span>Llegan dos. El ganador es el campeón y quien pierde se queda con el segundo lugar.</span>
+          </li>
+          <li>
+            <b>Contra reloj</b>
+            <span>Cada partido dura máximo 10 minutos. Si se acaba el tiempo, gana quien vaya adelante en el marcador.</span>
+          </li>
+        </ol>
+
+        <div class="bracket-wrap reveal" aria-label="Ejemplo de cuadro de eliminación directa">
+          <div class="bracket">
+            <div class="round">
+              <h4>Ronda</h4>
+              <div class="pair">
+                <div class="match"><span class="win">A</span><span>B</span></div>
+                <div class="match"><span class="win">C</span><span>D</span></div>
+              </div>
+              <div class="pair">
+                <div class="match"><span>E</span><span class="win">F</span></div>
+                <div class="match"><span class="win">G</span><span>H</span></div>
+              </div>
+            </div>
+            <div class="round">
+              <h4>Semifinal</h4>
+              <div class="pair">
+                <div class="match"><span class="win">A</span><span>C</span></div>
+                <div class="match"><span>F</span><span class="win">G</span></div>
+              </div>
+            </div>
+            <div class="round">
+              <h4>Final</h4>
+              <div class="match match--final"><span class="win">A</span><span>G</span></div>
+            </div>
+            <div class="round round--podium">
+              <h4>Premios</h4>
+              <div class="podium podium--1"><small>Campeón</small><b>A</b></div>
+              <div class="podium podium--2"><small>2do lugar</small><b>G</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REGLAMENTO ===== -->
+  <section class="section section--rules" id="reglamento">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="eyebrow">Reglamento del torneo</p>
+        <h2 class="h2">Las reglas, <span class="red">resumidas</span></h2>
+        <p class="section__sub">Al inscribirte aceptas este reglamento. Léelo, que después no hay excusas, mijín.</p>
+      </header>
+
+      <div class="rules">
+        <article class="rule reveal">
+          <span class="rule__n">01</span>
+          <h3>¿Quién juega?</h3>
+          <ul>
+            <li>Aunque lo organiza ASE FICA, está abierto a todos los estudiantes de la UDLA.</li>
+            <li>Inscripción individual hasta el lunes 30 de noviembre.</li>
+            <li>Hasta 64 cupos.</li>
+            <li>Presenta tu identificación universitaria el día del torneo.</li>
+          </ul>
+        </article>
+        <article class="rule reveal">
+          <span class="rule__n">02</span>
+          <h3>El formato</h3>
+          <ul>
+            <li>1 vs 1 por eliminación directa: el que pierde, sale.</li>
+            <li>El cuadro de enfrentamientos se arma por sorteo.</li>
+            <li>La organización puede ajustar el formato según el número de inscritos y el tiempo.</li>
+          </ul>
+        </article>
+        <article class="rule reveal">
+          <span class="rule__n">03</span>
+          <h3>Los partidos</h3>
+          <ul>
+            <li>2 sets de 5 puntos o un máximo de 10 minutos.</li>
+            <li>Si se cumplen los 10 minutos, gana quien tenga más puntos.</li>
+            <li>Hay 2 minutos de cambio entre un encuentro y otro.</li>
+          </ul>
+        </article>
+        <article class="rule reveal">
+          <span class="rule__n">04</span>
+          <h3>El saque</h3>
+          <ul>
+            <li>Lanza la pelota vertical desde la palma abierta, sin esconderla.</li>
+            <li>Debe botar primero en tu lado y luego en el del rival.</li>
+            <li>El saque cambia cada 2 puntos.</li>
+            <li>Si toca la red y cae bien, se repite.</li>
+          </ul>
+        </article>
+        <article class="rule reveal">
+          <span class="rule__n">05</span>
+          <h3>Ni se te ocurra</h3>
+          <ul>
+            <li>Tocar la mesa con la mano libre mientras la pelota está en juego.</li>
+            <li>Mover la mesa a propósito.</li>
+            <li>Devolver sin dejar botar la pelota una vez en tu lado.</li>
+            <li>Si no la devuelves bien, el punto es del rival.</li>
+          </ul>
+        </article>
+        <article class="rule reveal">
+          <span class="rule__n">06</span>
+          <h3>Llega a tiempo</h3>
+          <ul>
+            <li>Preséntate 10 minutos antes de tu encuentro.</li>
+            <li>Tolerancia máxima: 5 minutos.</li>
+            <li>Si no llegas, pierdes por W.O.</li>
+            <li>Ven con ropa y zapatos deportivos.</li>
+          </ul>
+        </article>
+        <article class="rule reveal">
+          <span class="rule__n">07</span>
+          <h3>Implementos</h3>
+          <ul>
+            <li>Nosotros ponemos mesas, raquetas y pelotas.</li>
+            <li>Puedes traer tu raqueta si está en buen estado.</li>
+            <li>Cuida los implementos; nada que sea un riesgo para otros.</li>
+          </ul>
+        </article>
+        <article class="rule reveal">
+          <span class="rule__n">08</span>
+          <h3>Cómo se gana</h3>
+          <ul>
+            <li>Quien pierde un partido queda eliminado.</li>
+            <li>Si un jugador se retira, gana su rival.</li>
+            <li>Lo que dice el árbitro, va. Sus decisiones son definitivas.</li>
+          </ul>
+        </article>
+        <article class="rule reveal">
+          <span class="rule__n">09</span>
+          <h3>Juego limpio</h3>
+          <ul>
+            <li>Respeto a rivales, árbitros y organizadores.</li>
+            <li>Cero insultos, agresiones o actitudes antideportivas.</li>
+            <li>No interfieras en otros partidos y cuida las instalaciones.</li>
+            <li>Sanciones: advertencia, pérdida del partido o descalificación.</li>
+          </ul>
+        </article>
+        <article class="rule reveal">
+          <span class="rule__n">10</span>
+          <h3>Premiación</h3>
+          <ul>
+            <li>Solo hay premio para el primer y el segundo lugar.</li>
+            <li><b>1er lugar:</b> GTA VI para PS5.</li>
+            <li><b>2do lugar:</b> $40 de consumo en Katari.</li>
+          </ul>
+        </article>
+        <article class="rule reveal">
+          <span class="rule__n">11</span>
+          <h3>Lo general</h3>
+          <ul>
+            <li>Inscribirte implica aceptar este reglamento.</li>
+            <li>Lo no previsto lo resuelve la organización.</li>
+            <li>Se pueden hacer ajustes operativos para que todo salga bien.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PREMIOS ===== -->
+  <section class="section section--prize" id="premio">
+    <div class="container prize reveal">
+      <div class="prize__media">
+        <!-- PREMIO (opcional): coloca una imagen en public/assets/premio/premio.png -->
+        <span class="logo-slot logo-slot--prize" data-label="Imagen del premio">
+          <img src="/assets/premio/premio.png" alt="Premios del torneo">
+        </span>
+      </div>
+      <div class="prize__copy">
+        <p class="eyebrow eyebrow--light">Premios</p>
+        <h2 class="h2 h2--light">¿Por qué <span class="gold">juegas?</span></h2>
+        <div class="prize__list">
+          <div class="prize-item prize-item--1">
+            <span class="prize-item__place">1er<br>lugar</span>
+            <div><b>GTA VI</b><small>para PS5</small></div>
+          </div>
+          <div class="prize-item prize-item--2">
+            <span class="prize-item__place">2do<br>lugar</span>
+            <div><b>$40</b><small>de consumo en Katari</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INSCRÍBETE ===== -->
+  <section class="section section--cta" id="inscribete">
+    <div class="banderines banderines--flip" aria-hidden="true"></div>
+    <div class="container cta reveal">
+      <p class="eyebrow eyebrow--light">¿Te le mides?</p>
+      <h2 class="cta__title">¡Inscríbete!</h2>
+      <p class="cta__text">Llena tus datos, sube tu comprobante de $2,50 y listo. Te confirmamos por WhatsApp hasta el 1 de diciembre.</p>
+      <a href="/inscripcion" class="btn btn--white btn--xl" data-cta>Quiero jugar →</a>
+      <p class="cta__closed" data-closed hidden>Las inscripciones ya cerraron. ¡Nos vemos en UDLAPark!</p>
+    </div>
+  </section>
+
+  <!-- ===== PIE ===== -->
+  <footer class="footer">
+    <div class="chiva-band" aria-hidden="true"></div>
+    <div class="container footer__inner">
+      <div class="footer__logos">
+        <span class="logo-slot logo-slot--sm" data-label="Logo ASE UDLA">
+          <img src="/assets/logos/logo-ase-udla.png" alt="ASE UDLA">
+        </span>
+        <span class="logo-slot logo-slot--sm" data-label="Logo FICA">
+          <img src="/assets/logos/logo-fica.png" alt="FICA">
+        </span>
+      </div>
+      <p class="footer__info">
+        Más info:
+        <a href="https://instagram.com/aseudla.fica" target="_blank" rel="noopener">@aseudla.fica</a> ·
+        <a href="https://wa.me/593998320151" target="_blank" rel="noopener">0998320151</a>
+      </p>
+      <p>Organiza <strong>ASE UDLA · FICA</strong> — Torneo de Ping Pong por Fiestas de Quito 2026</p>
+      <p class="footer__viva">¡Que viva Quito! <span class="ball-css ball-css--xs secret-ball" aria-hidden="true"></span></p>
+    </div>
+  </footer>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

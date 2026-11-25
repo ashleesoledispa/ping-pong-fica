@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inscripción · Torneo de Ping Pong · ASE UDLA FICA</title>
+  <meta name="description" content="Inscríbete al Torneo de Ping Pong 1 vs 1 por Fiestas de Quito. $2,50 por inscripción.">
+  <meta name="theme-color" content="#0a2552">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="page-form">
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a href="/" class="brand" aria-label="Inicio">
+        <span class="logo-slot logo-slot--sm" data-label="Logo ASE UDLA">
+          <img src="/assets/logos/logo-ase-udla.png" alt="ASE UDLA">
+        </span>
+        <span class="brand__text">Ping Pong<br><small>Fiestas de Quito</small></span>
+      </a>
+      <a href="/" class="btn btn--ghost btn--sm">← Volver</a>
+    </div>
+  </header>
+
+  <section class="form-hero">
+    <div class="banderines" aria-hidden="true"></div>
+    <div class="container form-hero__inner">
+      <span class="pill">Inscripción 1 vs 1</span>
+      <h1 class="form-hero__title">Asegura tu <span class="red">cupo</span></h1>
+      <p>Llena tus datos, paga <strong>$2,50</strong> y sube tu comprobante. ¡Así de fácil, ve!</p>
+      <ul class="chips chips--center">
+        <li>2 de diciembre · 10h00 – 16h00</li>
+        <li>UDLAPark</li>
+        <li>Hasta el lunes 30 de nov.</li>
+      </ul>
+      <p class="form-hero__cupos" data-cupos hidden></p>
+    </div>
+    <img class="skyline skyline--short" src="/assets/quito-skyline.svg" alt="" aria-hidden="true">
+  </section>
+
+  <main class="container form-wrap">
+
+    <div class="alert alert--closed" data-closed hidden>
+      <b>Las inscripciones están cerradas o ya no quedan cupos.</b> Gracias por el interés, ¡nos vemos en UDLAPark el 2 de diciembre!
+    </div>
+
+    <form id="form-inscripcion" class="form" novalidate>
+
+      <!-- 01 DATOS DEL JUGADOR -->
+      <fieldset class="card-step">
+        <legend><span class="step-n">01</span> Tus datos</legend>
+        <div class="grid-2">
+          <div class="field field--full">
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" required maxlength="100" autocomplete="name" placeholder="Nombre y apellido">
+          </div>
+          <div class="field">
+            <label for="correo">Correo institucional</label>
+            <input id="correo" name="correo" type="email" required maxlength="120" autocomplete="email" placeholder="nombre.apellido@udla.edu.ec">
+          </div>
+          <div class="field">
+            <label for="idBanner">ID Banner</label>
+            <input id="idBanner" name="idBanner" required maxlength="20" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="Tu ID Banner">
+          </div>
+          <div class="field">
+            <label for="celular">Número celular <em>(WhatsApp)</em></label>
+            <input id="celular" name="celular" type="tel" inputmode="tel" required maxlength="18" autocomplete="tel" placeholder="09XXXXXXXX">
+          </div>
+          <div class="field">
+            <label for="carrera">Carrera</label>
+            <input id="carrera" name="carrera" required maxlength="100" placeholder="Ej: Ingeniería de Software">
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- 02 PAGO -->
+      <fieldset class="card-step card-step--pay">
+        <legend><span class="step-n">02</span> Datos de pago</legend>
+        <p class="pay__intro">Transfiere o deposita <strong class="pay__amount">$2,50</strong> a esta cuenta:</p>
+        <div class="bank">
+          <div class="bank__head">
+            <span class="bank__name">Banco Pichincha</span>
+            <span class="bank__type">Cuenta de ahorros</span>
+          </div>
+          <dl class="bank__rows">
+            <div><dt>Nombre</dt><dd>Ashlee Soledispa Villamar</dd><button type="button" class="copy" data-copy="Ashlee Soledispa Villamar">Copiar</button></div>
+            <div><dt>N.º de cuenta</dt><dd class="mono">2211861292</dd><button type="button" class="copy" data-copy="2211861292">Copiar</button></div>
+            <div><dt>Cédula</dt><dd class="mono">1350830574</dd><button type="button" class="copy" data-copy="1350830574">Copiar</button></div>
+            <div><dt>Valor</dt><dd class="mono">$2,50</dd></div>
+          </dl>
+        </div>
+        <p class="hint">Tip: en la descripción de la transferencia pon tu nombre y apellido.</p>
+      </fieldset>
+
+      <!-- 03 COMPROBANTE -->
+      <fieldset class="card-step">
+        <legend><span class="step-n">03</span> Comprobante de pago</legend>
+        <label class="dropzone" for="archivos" data-dropzone>
+          <input id="archivos" type="file" accept="image/jpeg,image/png,image/webp,application/pdf" multiple hidden>
+          <span class="dropzone__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="34" height="34"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 16V4m0 0-4 4m4-4 4 4M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          </span>
+          <span class="dropzone__title">Sube la foto o captura de tu comprobante</span>
+          <span class="dropzone__sub">Arrastra aquí o toca para elegir · JPG, PNG, WEBP o PDF · hasta 2 archivos</span>
+        </label>
+        <ul class="previews" data-previews></ul>
+      </fieldset>
+
+      <!-- ENVIAR -->
+      <div class="submit-box">
+        <label class="check">
+          <input type="checkbox" id="acepta" required>
+          <span>Leí y acepto el <a href="/#reglamento" target="_blank" rel="noopener">reglamento del torneo</a>.</span>
+        </label>
+        <p class="form-error" data-error role="alert" hidden></p>
+        <button type="submit" class="btn btn--red btn--xl btn--block" data-submit>
+          <span class="btn__label">Enviar inscripción</span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+        <p class="submit-box__note">Tu inscripción será confirmada <strong>a más tardar el 1 de diciembre</strong>. Te contactaremos vía <strong>WhatsApp</strong>.</p>
+      </div>
+    </form>
+
+    <!-- ÉXITO -->
+    <section class="success" data-success hidden>
+      <span class="ball-css ball-css--bounce" aria-hidden="true"></span>
+      <h2>¡Listo, ya estás dentro!</h2>
+      <p>Recibimos tu inscripción. Tu código es:</p>
+      <p class="success__code" data-code>PP-000</p>
+      <p>Revisaremos tu comprobante y tu inscripción será <strong>confirmada a más tardar hasta el 1 de diciembre</strong>. Te contactaremos vía <strong>WhatsApp</strong> al número que registraste.</p>
+      <p class="success__small">Guarda tu código por si acaso. ¡Que viva Quito!</p>
+      <a href="/" class="btn btn--red btn--lg">Volver al inicio</a>
+    </section>
+  </main>
+
+  <footer class="footer footer--slim">
+    <div class="chiva-band" aria-hidden="true"></div>
+    <div class="container footer__inner">
+      <p class="footer__info">
+        ¿Dudas? <a href="https://instagram.com/aseudla.fica" target="_blank" rel="noopener">@aseudla.fica</a> ·
+        <a href="https://wa.me/593998320151" target="_blank" rel="noopener">0998320151</a>
+      </p>
+      <p>Organiza <strong>ASE UDLA · FICA</strong> — Torneo de Ping Pong por Fiestas de Quito 2026</p>
+    </div>
+  </footer>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/inscripcion.js"></script>
+</body>
+</html>
