@@ -2,13 +2,12 @@
   "name": "torneo-pingpong-fica",
   "version": "1.0.0",
   "description": "Página de inscripción del Torneo de Ping Pong 1 vs 1 por Fiestas de Quito — ASE UDLA FICA",
-  "main": "server.js",
   "private": true,
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js"
   },
   "engines": {
-    "node": ">=20.12"
+    "node": "22.x"
   }
 }
